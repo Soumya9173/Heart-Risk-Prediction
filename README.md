@@ -10,13 +10,9 @@ An interactive Streamlit application that predicts the risk of heart disease bas
 - Clear risk feedback (High vs Low risk)
 
 
-## Demo Screenshot (optional)
-You can run the app locally using the steps below. If you deploy it, consider adding a screenshot or GIF here to show the UI.
-
-
 ## Project Structure
 ```
-D:/ML-part3
+heart risk prediction
 ├── app.py             # Streamlit app
 ├── KNN_heart.pkl      # Trained KNN model (pickle)
 ├── scaler.pkl         # Fitted scaler used during training
@@ -124,21 +120,3 @@ Note on security: pickle/joblib files are executable code. Only open artifacts y
 - Other options: Render, Hugging Face Spaces (Streamlit), or any VM where you can run `streamlit run`.
 
 
-## Example requirements.txt (optional)
-If you prefer a pinned dependencies file, create `requirements.txt` with content similar to:
-```
-streamlit>=1.20
-pandas>=1.5
-scikit-learn>=1.1
-joblib>=1.2
-```
-Adjust versions to match your environment or training environment if you encounter compatibility issues.
-
-
-## License
-Add your preferred license here (e.g., MIT). If you’re unsure, you can omit this section or keep it as a placeholder.
-
-
-## Acknowledgments
-- Inspired by common open heart disease datasets and educational ML demos.
-- Built with Streamlit and scikit‑learn.
