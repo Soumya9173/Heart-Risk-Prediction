@@ -4,6 +4,10 @@ An interactive Streamlit application that predicts the risk of heart disease bas
 
 Note: In the app's UI, the title appears as "Heart Stroke prediction." This refers to the same heart disease risk predictor described here.
 
+## Live App
+Deployed on Streamlit Community Cloud:
+https://heart-risk-pred.streamlit.app/
+
 
 ## Features
 - Simple, web‑based UI built with Streamlit
