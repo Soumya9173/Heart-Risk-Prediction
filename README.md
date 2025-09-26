@@ -2,6 +2,8 @@
 
 An interactive Streamlit application that predicts the risk of heart disease based on user‑provided clinical information. The app loads a pre‑trained K‑Nearest Neighbors (KNN) model along with its scaler and a list of expected feature columns to ensure inputs are correctly aligned before prediction.
 
+Note: In the app's UI, the title appears as "Heart Stroke prediction." This refers to the same heart disease risk predictor described here.
+
 
 ## Features
 - Simple, web‑based UI built with Streamlit
@@ -17,6 +19,7 @@ heart risk prediction
 ├── KNN_heart.pkl      # Trained KNN model (pickle)
 ├── scaler.pkl         # Fitted scaler used during training
 ├── columns.pkl        # List of expected feature columns (order matters)
+├── requirements.txt   # Python dependencies for the app
 └── README.md          # This file
 ```
 
@@ -49,7 +52,11 @@ It’s recommended (but not required) to use a virtual environment.
   source .venv/bin/activate
   ```
 
-2) Install dependencies:
+2) Install dependencies (recommended):
+```bash
+pip install -r requirements.txt
+```
+Or install packages individually:
 ```bash
 pip install streamlit pandas scikit-learn joblib
 ```
@@ -95,28 +102,5 @@ This will start a local server and open the app in your default browser (typical
 - `columns.pkl`: Serialized Python list (or similar) containing the exact feature names (including one‑hot encoded column names) and their order.
 
 Note on security: pickle/joblib files are executable code. Only open artifacts you trust.
-
-
-## Troubleshooting
-- FileNotFoundError for model/scaler/columns
-  - Ensure `KNN_heart.pkl`, `scaler.pkl`, and `columns.pkl` are in the same directory as `app.py`.
-
-- Version mismatch errors (e.g., from scikit‑learn/joblib)
-  - Try aligning package versions to those used during training. Start with the latest scikit‑learn and joblib; if issues persist, downgrade/upgrade carefully.
-
-- Streamlit command not found
-  - Ensure your virtual environment is activated and that `streamlit` is installed. On Windows, use PowerShell and activate with `.\.venv\Scripts\Activate`.
-
-- Port already in use
-  - Run with a different port: `streamlit run app.py --server.port 8502`.
-
-
-## Deployment
-- Streamlit Community Cloud:
-  1. Push this repository to GitHub.
-  2. Create a new app on https://streamlit.io/cloud pointing to `app.py`.
-  3. In the app’s settings, add Python dependencies (streamlit, pandas, scikit‑learn, joblib) in the package section or via a `requirements.txt` file.
-
-- Other options: Render, Hugging Face Spaces (Streamlit), or any VM where you can run `streamlit run`.
 
 
